@@ -1,0 +1,3 @@
+npm install cypress
+1. npx cypress open - Abrir la UI de cypress y configurar E2E
+
