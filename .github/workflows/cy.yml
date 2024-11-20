@@ -6,5 +6,16 @@ jobs:
         steps:
          - name: Checkout
            uses: actions/checkout@v4
+
+         - name: Set working directory to my_app_live
+           run: echo "Working directory set to my_app_live"
+           working-directory: ./my_app_live
+
+         - name: Install dependencies
+           run: npm install
+           working-directory: ./my_app_live
+
          - name: Cypress run
            uses: cypress-io/github-action@v2
+           with:
+             working-directory: ./my_app_live
